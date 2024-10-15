@@ -18,7 +18,7 @@ def main(request):
         return jsonify({"detail": "Invalid base64 file encoding"}), 400
 
     passwords = payload["passwords"]
-    pdf_path = f"tmp/{payload['filename']}"
+    pdf_path = f"/tmp/{payload['filename']}"
 
     # Write the file to disk
     try:
